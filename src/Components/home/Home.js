@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 const Home = () => {
   let navigate = useNavigate();
   const [user, setUser] = useState();
   const [isLog, setIsLog] = useState();
-  // const state = useSelector((state) => {
-  //   return state;
-  // });
+  const state = useSelector((state) => {
+    return state;
+  });
 
-  // console.log(state.signIn.userID);
+  
   useEffect(() => {
     let userid = localStorage.getItem("id");
     if (userid) {

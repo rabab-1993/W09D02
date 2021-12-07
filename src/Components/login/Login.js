@@ -7,7 +7,7 @@ import { logIn } from "../reducers/login";
 const Login = () => {
   let navigate = useNavigate();
   const dispatch = useDispatch();
-  
+
   const [logUser, setLogUser] = useState({
     email: "",
     password: "",
@@ -21,7 +21,6 @@ const Login = () => {
         `${process.env.REACT_APP_BASE_URL}/user/login`,
         logUser
       );
-      console.log(result.data);
 
       const data = {
         token: result.data.token,
